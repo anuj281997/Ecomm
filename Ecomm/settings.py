@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-yw9is!)4lt@+u^c8o90dg_evo=0m+9-eef8zy1xnrz+@n=cced
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['Anuj28.pythonanywhere.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -79,24 +79,24 @@ import dj_database_url
 
 
 
-# DATABASES = {
-#      'default': {
-#          'ENGINE': 'django.db.backends.sqlite3',
-#          'NAME': 'Ecomm.db',
-#      }
-#  }
-
 DATABASES = {
-    'default' : {
-        'ENGINE' : 'django.db.backends.mysql',
-        'NAME' :  'newdb',
-        'USER' : 'anuj',
-        'PASSWORD' : 'Anuj@2801',
-        'HOST' : '127.0.0.1',
-        'PORT' : '3306',
-    }
-}
-DATABASES ['default'] = dj_database_url.config()
+     'default': {
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': 'Ecomm.db',
+     }
+ }
+
+# DATABASES = {
+#     'default' : {
+#         'ENGINE' : 'django.db.backends.mysql',
+#         'NAME' :  'newdb',
+#         'USER' : 'anuj',
+#         'PASSWORD' : 'Anuj@2801',
+#         'HOST' : '127.0.0.1',
+#         'PORT' : '3306',
+#     }
+# }
+# DATABASES ['default'] = dj_database_url.config()
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
