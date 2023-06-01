@@ -74,15 +74,29 @@ WSGI_APPLICATION = 'Ecomm.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
+import dj_database_url
+
+
+
+
+# DATABASES = {
+#      'default': {
+#          'ENGINE': 'django.db.backends.sqlite3',
+#          'NAME': 'Ecomm.db',
+#      }
+#  }
 
 DATABASES = {
-     'default': {
-         'ENGINE': 'django.db.backends.sqlite3',
-         'NAME': 'Ecomm.db',
-     }
- }
-
-
+    'default' : {
+        'ENGINE' : 'django.db.backends.mysql',
+        'NAME' :  'newdb',
+        'USER' : 'anuj',
+        'PASSWORD' : 'Anuj@2801',
+        'HOST' : '127.0.0.1',
+        'PORT' : '3306',
+    }
+}
+DATABASES ['default'] = dj_database_url.config()
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
@@ -122,7 +136,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR , "static/"),
 ]
-STATIC_ROOT = os.path.join(BASE_DIR,"staticfiles_build","static")
+# STATIC_ROOT = os.path.join(BASE_DIR,"static/")
 
 #STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),"static_cdn","static_root")
 

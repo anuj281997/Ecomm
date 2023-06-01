@@ -11,7 +11,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('User.urls')),
-    re_path(r'^static/(?P<path>.*)$',serve,{'document_root': settings.STATIC_ROOT}),
+    # re_path(r'^static/(?P<path>.*)$',serve,{'document_root': settings.STATIC_ROOT}),
 ]
 
 
